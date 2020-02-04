@@ -1,0 +1,192 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$bgLight:white;
+$mainBg:#f1f1f1;
+
+body
+{
+    background-color: $mainBg;
+}
+
+.mainNav{
+
+    background-color: $bgLight!important;
+}
+
+.aside{
+    position: relative;
+    background-color: $bgLight;
+}
+
+.aside .aside_img{
+     position: absolute;
+     top: 30%;
+     left: 34%;
+}
+
+// midea area
+
+.media 
+{
+position: relative;
+
+}
+.media input
+{
+    border-radius: 50px;
+    background-color: #f1f1f1;
+    box-shadow: inset 0px 1px 10px 0px rgba(85, 85, 85, 0.2);
+   border: none;
+   
+}
+
+
+.media img
+{
+    transform: scale(.8);
+}
+.btn-container
+{
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+.media button
+{
+
+border-radius: 50px;
+border:none;
+background-color: #dc4734;
+padding: 9px 25px;
+color:#fff;
+font-size: 12px;
+font-weight: 700;
+}
+
+
+
+.post_area{
+    background-color: $bgLight;
+}
+.post_area a,.post_area a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+
+// heart img 
+.heart{
+    width: 15px;
+    height: 15px;
+}
+
+.item img:nth-child(1){
+    transform: scale(0.6);
+}
+.header span{
+    border-bottom: 2px solid orange;
+   padding-bottom: 10px;
+           } 
+
+.bgWhight{
+    background-color: $bgLight;
+}
+/* start footer*/
+
+.owl-carousel .owl-nav  .owl-next , .owl-carousel  .owl-dot
+{
+    position: absolute !important;
+    top:50%;
+    transform: translateY(-50%);
+   right: -30px !important;
+ 
+   border: 1px solid rgba(0,0,0,.9) !important;
+//    padding: 20px  40px !important;
+   border-radius: 50% !important;
+ 
+}
+.owl-carousel .owl-nav .owl-prev, .owl-carousel  .owl-dot{
+  
+    position: absolute !important;
+    top:50%;
+    transform: translateY(-50%);
+   left:-30px !important;
+  
+   border: 1px solid #000 !important;
+//    padding: 20px  40px !important;
+   border-radius: 50% !important;
+ 
+}
+
+.owl-carousel  i
+{
+    padding: 5px 10px;
+}
+
+.box img 
+{
+    transform: scale(.6);
+}
+
+footer
+{
+    background-color:$mainBg;
+}
+
+// media query 
+
+@media (max-width:320px){
+
+
+    .small_img{
+
+        margin-bottom:20px!important;
+
+    }
+    .post_area{
+        text-align: center;
+    }
+
+
+}
+// media query 
+
+@media (max-width:375px){
+
+
+    .small_img{
+        margin-bottom:20px!important;
+    }
+    .post_area{
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width:425px){
+    .small_img{
+        margin-bottom:20px!important;
+    }
+    .post_area{
+        text-align: center;
+    }
+
+}
+
+@media (max-width:768px){
+.mainRow{
+    justify-content: center;
+}
+
+}
+
+
+
+
+
+
+

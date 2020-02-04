@@ -1,0 +1,265 @@
+
+
+
+<div class="container my-5 py-5">
+<div class="row mainRow">
+
+    <div class="col-md-3 d-none d-lg-block">
+              <!------------------------------profile card --------------------------->
+        <div class="aside shadow mb-4">
+            <img class="img-fluid" src="../../assets/images/banner-small.jpg">
+            <img class="img-fluid rounded-circle aside_img" src="../../assets/images/profile-midle-1.jpg">
+            <p class="text-center px-1 mt-5 py-3 px-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ipsa.</p>
+        </div>
+
+                <!------------------------------liked page card --------------------------->
+
+         <div class="liked_Containter shadow bgWhight py-3 my-3 px-1">
+
+            <h5 class="mb-5 text-center header"> <span>Page</span> you may like </h5>
+                    
+            <!-- article -->
+            <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                <p> 
+                     Travel The World<br>
+                     Adventure</p> 
+                <img class="heart" src="../../assets/images/heart-color.png"> 
+
+            </div>
+             <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                <p> 
+                     Travel The World<br>
+                     Adventure</p> 
+                <img class="heart" src="../../assets/images/heart.png"> 
+
+            </div>
+             <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                <p> 
+                     Travel The World<br>
+                     Adventure</p> 
+                <img class="heart" src="../../assets/images/heart-color.png"> 
+
+            </div>
+                    
+
+
+         </div>    
+         
+                   <!------------------------------ start latest top news  card --------------------------->
+
+                   <div class="liked_Containter shadow bgWhight py-3 my-3 px-1">
+
+                    <h5 class="mb-5 text-center header"> <span>Latest </span> Top News </h5>
+                            
+                    <!-- article -->
+                    <div class="item d-flex justify-content-around my-3">
+        
+                        <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                        <div class="px-1">
+                            <a>Any one can join with us if you want</a><br>
+                            <small class="text-muted"> 20 Min Ago</small>
+                        </div>
+        
+                    </div>
+                     <!-- article -->
+                     <div class="item d-flex justify-content-around my-3">
+        
+                        <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-28.jpg">
+                        <div class="px-1">
+                            <a>Any one can join with us if you want</a><br>
+                            <small class="text-muted"> 20 Min Ago</small>
+                        </div>
+        
+                    </div>
+                     <!-- article -->
+                     <div class="item d-flex justify-content-around my-3">
+        
+                        <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-32.jpg">
+                        <div class="px-1">
+                            <a>Any one can join with us if you want</a><br>
+                            <small class="text-muted"> 20 Min Ago</small>
+                        </div>
+        
+                    </div>
+                            
+        
+        
+                 </div>  
+
+    </div>
+    <!-- end aside left -->
+
+   
+
+   
+
+    <!-- start  posts body -->
+    <div  class="col-md-6 ">
+
+         <!------------------------ writing post area -------------------------->
+     
+         <div class="middle_part">
+
+            <div class="media px-3 shadow d-flex align-items-center py-4 mb-4">
+
+                <img src="../../assets/images/profile-small-27.jpg" class="mr-3 rounded-circle" alt="...">
+
+                <div class="media-body">
+
+                    <input class="form-control w-100" placeholder="say somthing...">
+                    <div class="btn-container">
+                        <button>POST</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngFor="let user of allUsers ; let i = index" class="shadow mb-5 px-3 py-4 post_area" >
+
+                <!-- <div *ngIf="allPosts[i] !=undefiend && allPhotoes[i] !=undefiend "> -->
+
+                <a [routerLink] ="['/post',allUsers[i].id]">
+
+                <div class="row pt-2">
+
+                    <div class="col-lg-2 col-md-4 ">
+                        <img class="img-fluid rounded-circle small_img"  [src]= "allPhotoes[i].thumbnailUrl">
+                    </div>
+
+                    <div class="col-lg-6 col-md-8">
+                        <div class="px-1">
+                            <h6>{{user.name}}</h6>
+                            <p class="mb-1">user id : {{user.id}}</p>
+                            <p><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                            <p>{{allPosts[i].body}}</p>
+                            <img class="img-fluid py-2" [src]="allPhotoes[i].url">
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-8">
+                        <p class="mt-3" >
+                            <i class="fa fa-heart"></i>&nbsp;
+                        <small>  you and 250 people like this </small>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 offset-lg-2 col-md-4 ">
+                        <div  class="d-flex justify-content-around mt-3">
+                        <span >20</span>
+                        <span> <i class="fa fa-comment-alt"></i>  </span>
+                        <span>10</span>
+                        <span> <i class="fa fa-share-alt"></i> </span>
+                    </div>
+                    </div>
+                </div>
+
+            </a>
+            <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- end  posts body -->
+
+
+    <!-- start aside right -->
+    <div class="col-md-3 d-none d-lg-block">
+
+         <!------------------------------ start recent notification  card --------------------------->
+
+         <div class="liked_Containter shadow bgWhight py-3 mb-3 px-1">
+
+            <h5 class="mb-5 text-center header"> <span>Recent </span> Notifications</h5>
+                    
+            <!-- article -->
+            <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                <div class="px-1">
+                    <a>Any one can join with us if you want</a><br>
+                    <small class="text-muted"> 20 Min Ago</small>
+                </div>
+
+            </div>
+             <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-28.jpg">
+                <div class="px-1">
+                    <a>Any one can join with us if you want</a><br>
+                    <small class="text-muted"> 20 Min Ago</small>
+                </div>
+
+            </div>
+             <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-32.jpg">
+                <div class="px-1">
+                    <a>Any one can join with us if you want</a><br>
+                    <small class="text-muted"> 20 Min Ago</small>
+                </div>
+
+            </div>
+
+             <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-28.jpg">
+                <div class="px-1">
+                    <a>Any one can join with us if you want</a><br>
+                    <small class="text-muted"> 20 Min Ago</small>
+                </div>
+
+            </div>
+
+                   <!-- article -->
+                   <div class="item d-flex justify-content-around my-3">
+
+                    <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-27.jpg">
+                    <div class="px-1">
+                        <a>Any one can join with us if you want</a><br>
+                        <small class="text-muted"> 20 Min Ago</small>
+                    </div>
+    
+                </div>
+
+                  <!-- article -->
+             <div class="item d-flex justify-content-around my-3">
+
+                <img class="img-fluid rounded-circle" src="../../assets/images/profile-small-32.jpg">
+                <div class="px-1">
+                    <a>Any one can join with us if you want</a><br>
+                    <small class="text-muted"> 20 Min Ago</small>
+                </div>
+
+            </div>
+
+                    
+
+
+         </div>  
+
+    </div>
+    <!--end aside left -->
+
+</div>
+<!-- end row -->
+
+
+
+
+</div>
+<!-- end container -->

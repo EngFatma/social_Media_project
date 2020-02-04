@@ -1,0 +1,66 @@
+
+
+<div class="container my-5 pt-5">
+    <div class="row justify-content-center">
+        <!-- start  posts body -->
+    <div  class="col-md-6 ">
+
+        <div class="shadow mb-5 px-3 py-4 post_area " >
+
+               <div *ngIf="post">
+        
+            <div class="row pt-2">
+
+                <div class="col-lg-2 col-md-4">
+                    <img class="img-fluid rounded-circle small_img"  [src]= "photos.thumbnailUrl">
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="px-1">
+                        <h6>{{user.name}}</h6>
+                        <p class="mb-1">user id : {{user.id}}</p>
+                        <p><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                        <p>{{post.body}}</p>
+                        <img class="img-fluid py-2" [src]="photos.url">
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <p class="mt-3" >
+                        <i class="fa fa-heart"></i>&nbsp;
+                        <small>  you and 250 people like this </small>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 offset-lg-2 col-md-4">
+                    <div class="d-flex justify-content-around mt-3">
+                    <span>{{comentOfOnePost.length}}</span>
+                    <span> <i class="fa fa-comment-alt"></i>  </span>
+                    <span>10</span>
+                    <span> <i class="fa fa-share-alt"></i> </span>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-md-12">
+                     <div *ngFor="let c of comentOfOnePost" class="comnt py-2 px-2 card-footer" >
+                         <p>{{c}}</p>
+                         <i class="fas fa-thumbs-up "></i>
+
+                     </div>
+
+                </div>
+            </div>
+
+
+
+        
+        </div>
+        </div>
+    </div>
+    <!-- end  posts body -->
+
+      </div>
+    </div>
